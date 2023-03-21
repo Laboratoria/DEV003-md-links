@@ -1,6 +1,8 @@
 {
   "name": "md-links",
   "version": "0.1.0",
+  "description": "This proyect evaluates the links of a markdown document",
+  "main": "index.js",
   "engines": {
     "node": ">=16.x"
   },
@@ -8,5 +10,27 @@
     "createdAt": "2023-02-07T18:15:01.196Z",
     "version": "5.5.0",
     "commit": "a63a770ea33332882790401851df337734b0b734"
+  },
+  "keywords": [
+    "links",
+    "markdown"
+  ],
+  "author": {
+    "name": "Elizabeth Hg",
+    "email": "dianaehg1003@gmail.com"
+  },
+  "scripts": {
+    "test": "node ./test/md-links.spec.js",
+    "start": "nodemon --exec node_modules/.bin/babel-node index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0" 
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.3",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "nodemon": "^2.0.21"
   }
 }
