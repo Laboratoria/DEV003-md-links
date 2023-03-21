@@ -25,18 +25,18 @@
 // resultado = factorial(0);
 // console.log(resultado);
 
-function soyAsincrona(micallback){
-    console.log('Hola, soy una función asíncrona');
-    setTimeout(function(){
-      console.log('estoy siendo asíncrono')
-      micallback();
-    }, 1000);
-  }
-  function callbackPrueba() {
-    console.log('terminando proceso');
-  }
-  console.log('iniciando proceso');
-  soyAsincrona(callbackPrueba);
+// function soyAsincrona(micallback){
+//     console.log('Hola, soy una función asíncrona');
+//     setTimeout(function(){
+//       console.log('estoy siendo asíncrono')
+//       micallback();
+//     }, 1000);
+//   }
+//   function callbackPrueba() {
+//     console.log('terminando proceso');
+//   }
+//   console.log('iniciando proceso');
+//   soyAsincrona(callbackPrueba);
   
 
 // function hola(nombre, micallback){

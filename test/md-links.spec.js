@@ -1,9 +1,7 @@
-const mdLinks = require('../src/index.js');
+const { functionSaludar } = require('../src/index.js');
 
-
-describe('mdLinks', () => {
-
-  it('should return a function with a promise', () => {
-    expect.typeof(mdLinks()).tobe(Promise);
+describe('functionSaludar', () => {
+  it('should be a function', () => {
+    expect(typeof functionSaludar).toBe('function');
   });
 });
