@@ -43,7 +43,7 @@ describe('ifItsAdirectory', () => {
 
 //---Test para saber si es un archivo
 describe('ifItsAFile', () => {
-  it('should return a directory .', () => {
+  it('should return a file .', () => {
     const path = 'C:\\Users\\ANDREA\\OneDrive\\Desktop\\Laboratoria\\DEV003-md-links'
     expect(ifItsAFile(path)).toBe(false)
   })
