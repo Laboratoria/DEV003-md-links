@@ -2,10 +2,10 @@
 //const modulo = require('./functions'); // llamamos al módulo por su dir
 // y ejecutar el modulo 
 // console.log(modulo);
-function saludar () {
+export function saludar () {
     console.log ('hola')
 };
-export const functionSaludar= saludar;
+
 
 
 //------------------
