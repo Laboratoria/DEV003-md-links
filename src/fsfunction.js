@@ -37,31 +37,36 @@ const typeFile = (pathRoute) => path.extname(pathRoute) === '.md' ? true : false
 const getfilesArray = (routePath) => {
   let filesArray = [];
   absolutePath;
-  if (!ifItsAdirectory(route) && typeFile(pathRoute)) {
-    filesArray.push(routePath);
-
-  } else if (ifItsAdirectory(route)) {
+  if (ifItsAdirectory(route)) {
     directory(route).forEach((element) => {
       const newPath = path.join(route, element);
       const newArray = getfilesArray(path.resolve(newPath));
       filesArray = filesArray.concat(newArray);
-    })
+    });
+    }else if(!ifItsAdirectory(route) && typeFile(pathRoute)) {
+    filesArray.push(routePath);
   }
   return filesArray;
-};
+  };
 
 //.......Leer archivo .md.......
 
 const fileRead = (routePath) => {
   return new Promise((resolve, reject) => {
-     return fs.readFile(routePath, 'utf8', (error, data) => {
-      if (error) {
-        reject(error)
+      fs.readFile(routePath, 'utf8', (error, data) => {
+      if(error){
+        reject('Inválido')
       }
       resolve(data)
     });
   })
 }
+// fileRead('.\\Pruebas\\README2.md').then((data) => {
+//   console.log(data);
+// }).catch(error => console.log(error))
+
+
+
 
 //.......Para extraer los links.......
 const searchLinks = (route, content) => {
@@ -74,9 +79,13 @@ const searchLinks = (route, content) => {
     }));
     return links;
 }
-console.log(searchLinks('fsfunction.js', '[Markdown](https://regexr.com/) [Node](https://nodejs.org/api/fs.html)' ))
-// .......Para saber el status.......
+// // console.log(searchLinks('fsfunction.js', '[Markdown](https://regexr.com/) [Node](https://nodejs.org/api/fs.html)' ))
+// fileRead('.\\Pruebas\\README2.md').then((data) => {
+//   console.log('data', data)
+//   console.log(searchLinks('.\\Pruebas\\README2.md', data));
+// }).catch(error => console.log(error))
 
+//.......Para saber el status.......
 const statusLink = path => {
   return new Promise(resolve => {
     searchLinks(path).then(arrayResult => {
@@ -118,5 +127,6 @@ module.exports = {
   fileRead,
   searchLinks,
   statusLink
+  
 
 };
