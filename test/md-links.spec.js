@@ -69,24 +69,43 @@ describe('typeFile', () => {
 
 
 // -------------Recorra el directorio --------
-describe('nos retorne un array de archivo md', () => {
-  test('validar si es una funcion', () => {
+describe('should return an array paths of .md files', () => {
+  test('its a function', () => {
     expect(typeof getfilesArray).toBe("function");
   });
 });
 
-describe("extrae en un array rutas de archivos .md", () => {
-  it("retorna un array con extension de archivo md", () => {
-    const route ='C:\\Users\\ANDREA\\OneDrive\\Desktop\\Laboratoria\\DEV003-md-links\\Pruebas';
+describe('extracts into an array paths of .md files', () => {
+  const route ='C:\\Users\\ANDREA\\OneDrive\\Desktop\\Laboratoria\\DEV003-md-links\\Pruebas';
+  it('returns an array with file extension md', () => {
+    
     const arrayMd = [
       'C:\\Users\\ANDREA\\OneDrive\\Desktop\\Laboratoria\\DEV003-md-links\\Pruebas\\Pruebas.md',
       'C:\\Users\\ANDREA\\OneDrive\\Desktop\\Laboratoria\\DEV003-md-links\\Pruebas\\README2.md',
     ];
-    expect(getfilesArray(route)
-    ).toEqual(arrayMd);
+    
+    expect(getfilesArray(route)).toEqual(arrayMd);
   });
 });
 
+
+// -------------Leer un archivo .md--------
+describe('fileRead', () => {
+  it('should return a md fileRead', () => {
+    const path = './README2.md'
+
+    return fileRead(path)
+      .then(result => {
+        // console.log(typeof re)
+        expect(result).toBe(typeof string)
+      })
+      .catch(error => {
+        {
+          error
+        }
+      })
+  })
+})
 
 // -------------Extraer los archivos y ponerlos en un array--------
 describe('searchLinks', () => {

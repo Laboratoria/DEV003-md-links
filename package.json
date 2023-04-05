@@ -10,9 +10,9 @@
     "commit": "a63a770ea33332882790401851df337734b0b734"
   },
   "dependencies": {
-    "chalk": "^5.2.0",
+    "colors": "^1.4.0",
     "jest": "^29.5.0",
-    "marked": "^4.2.12"
+    "node-emojify": "^0.0.15"
   },
   "description": "Validar archivos md",
   "main": "src/API.js",
@@ -25,6 +25,9 @@
   "keywords": [],
   "author": "Andrea Flores",
   "license": "ISC",
+  "bin": {
+    "md-links": "./src/CLI.js"
+  },
   "bugs": {
     "url": "https://github.com/AndreaFlo1794/DEV003-md-links/issues"
   },

@@ -13,7 +13,7 @@ const absolutePath = (pathRoute) => path.isAbsolute(pathRoute);
 //.......Si la ruta es relativa convertir a absoluta.......
 
 const routeRelative = (pathRoute) =>  absolutePath(pathRoute) ? pathRoute : path.resolve(pathRoute) ;
-console.log(routeRelative('src\\API.js'))
+// console.log(routeRelative('src\\API.js'))
 //.......Si la ruta es un directorio.......
 
 const ifItsAdirectory = (route) => fs.statSync(route).isDirectory();
@@ -37,13 +37,13 @@ const typeFile = (pathRoute) => path.extname(pathRoute) === '.md' ? true : false
 const getfilesArray = (routePath) => {
   let filesArray = [];
   absolutePath;
-  if (ifItsAdirectory(route)) {
-    directory(route).forEach((element) => {
-      const newPath = path.join(route, element);
+  if (ifItsAdirectory(routePath)) {
+    directory(routePath).forEach((element) => {
+      const newPath = path.join(routePath, element);
       const newArray = getfilesArray(path.resolve(newPath));
       filesArray = filesArray.concat(newArray);
     });
-    }else if(!ifItsAdirectory(route) && typeFile(pathRoute)) {
+    }else if(!ifItsAdirectory(routePath) && typeFile(routePath)) {
     filesArray.push(routePath);
   }
   return filesArray;
@@ -79,41 +79,49 @@ const searchLinks = (route, content) => {
     }));
     return links;
 }
-// // console.log(searchLinks('fsfunction.js', '[Markdown](https://regexr.com/) [Node](https://nodejs.org/api/fs.html)' ))
+// // // console.log(searchLinks('fsfunction.js', '[Markdown](https://regexr.com/) [Node](https://nodejs.org/api/fs.html)' ))
 // fileRead('.\\Pruebas\\README2.md').then((data) => {
 //   console.log('data', data)
 //   console.log(searchLinks('.\\Pruebas\\README2.md', data));
 // }).catch(error => console.log(error))
 
+// fileRead(routePath).then(content=>{
+//   const search = searchLinks(path, content)
+// })
+
 //.......Para saber el status.......
-const statusLink = path => {
+const statusLink = contentLinks => {
   return new Promise(resolve => {
-    searchLinks(path).then(arrayResult => {
-      let array = []
-      arrayResult.forEach(link => {
+      let array = [];
+      contentLinks.forEach(link => {
         const promiseFetch = fetch(link.href)
         array.push(promiseFetch)
       })
       Promise.allSettled(array).then(result => {
+        // console.log(result)
         let okResult = ''
         for (let i = 0; i < result.length; i++) {
           if (result[i].status === 'fulfilled') {
+            // console.log('hola')
             result[i].value.ok ? (okResult = 'ok') : (okResult = 'fail')
-            arrayResult[i].status = result[i].value.status
-            arrayResult[i].ok = okResult
+            contentLinks[i].status = result[i].value.status
+            contentLinks[i].ok = okResult
           } else {
             okResult = 'fail'
-            arrayResult[i].status = 404
-            arrayResult[i].ok = okResult
+            contentLinks[i].status = 404
+            contentLinks[i].ok = okResult
           }
-          resolve(arrayResult)
+          // console.log(contentLinks)
+          resolve(contentLinks)
+          
         }
       })
     })
-  })
-}
+  }
 
-
+// fileRead('.\\Pruebas\\README2.md').then((data) => {
+//   statusLink( searchLinks('.\\Pruebas\\README2.md', data)).then(console.log)
+// })
 
 module.exports = {
   routeExists,
