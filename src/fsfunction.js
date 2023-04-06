@@ -14,9 +14,11 @@ const absolutePath = (pathRoute) => path.isAbsolute(pathRoute);
 
 const routeRelative = (pathRoute) =>  absolutePath(pathRoute) ? pathRoute : path.resolve(pathRoute) ;
 // console.log(routeRelative('src\\API.js'))
-//.......Si la ruta es un directorio.......
 
+//.......Si la ruta es un directorio.......
 const ifItsAdirectory = (route) => fs.statSync(route).isDirectory();
+// console.log(ifItsAdirectory('src\\fsfunction.js'))
+// C:\\Users\\ANDREA\\OneDrive\\Desktop\\Laboratoria\\DEV003-md-links\\Pruebas
 
 //.......Si es un directorio que lo lea.......
 
@@ -36,7 +38,6 @@ const typeFile = (pathRoute) => path.extname(pathRoute) === '.md' ? true : false
 
 const getfilesArray = (routePath) => {
   let filesArray = [];
-  absolutePath;
   if (ifItsAdirectory(routePath)) {
     directory(routePath).forEach((element) => {
       const newPath = path.join(routePath, element);
@@ -48,7 +49,7 @@ const getfilesArray = (routePath) => {
   }
   return filesArray;
   };
-
+// console.log(getfilesArray('Pruebas'));
 //.......Leer archivo .md.......
 
 const fileRead = (routePath) => {
