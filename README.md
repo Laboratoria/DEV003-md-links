@@ -220,9 +220,6 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ## 5. Instrucciones de Uso
 
-### FAQs
-
-#### ¿Cómo hago para que mi módulo sea _instalable_ desde GitHub?
 
 
 ## 6. Checklist
@@ -257,3 +254,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   lines, y branches.
 * [x] Pasa tests (y linters) (`npm test`).
 
+## 7. Autor
+Mercedes Andrea Flores Catro
+* [Repositorio Github](https://github.com/AndreaFlo1794)
+* [LinkedIn](https://www.linkedin.com/in/mercedes-andrea-flores-castro-120048178/)
