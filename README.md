@@ -227,7 +227,27 @@ Para solicitar ayuda:
 
 ` md-links <path> --help `
 
+
 [![Implementaci-n.jpg](https://i.postimg.cc/Yqpc7JQq/Implementaci-n.jpg)](https://postimg.cc/kDhYFYjk)
+
+Para solicitar el estado de los links:
+
+` md-links <path> --validate `
+
+[![validate.jpg](https://i.postimg.cc/4x0NmJ11/validate.jpg)](https://postimg.cc/G4k1fnVB)
+
+Para solicitar el total de links exitosos y unicos:
+
+` md-links <path> --stats `
+
+[![stats.jpg](https://i.postimg.cc/59pJX44F/stats.jpg)](https://postimg.cc/DmWHDKb2)
+
+Para solicitar el total de links exitosos, unicos y rotos:
+
+` md-links <path> --validate --stats `
+
+[![validate-stats.jpg](https://i.postimg.cc/vHNdv06Y/validate-stats.jpg)](https://postimg.cc/Xpdhjc8m)
+
 
 ## 5. Checklist
 
