@@ -224,9 +224,10 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 ### Implementación
 
 Para solicitar ayuda:
+
 ` md-links <path> --help `
 
-[!(https://i.postimg.cc/Yqpc7JQq/Implementaci-n.jpg)](https://postimg.cc/kDhYFYjk)
+[![Implementaci-n.jpg](https://i.postimg.cc/Yqpc7JQq/Implementaci-n.jpg)](https://postimg.cc/kDhYFYjk)
 
 ## 5. Checklist
 
