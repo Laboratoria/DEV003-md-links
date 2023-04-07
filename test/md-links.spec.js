@@ -1,6 +1,7 @@
 const { routeExists, absolutePath,
   routeRelative, ifItsAdirectory, ifItsAFile, typeFile, directory, searchLinks, fileRead, getfilesArray } = require('../src/fsfunction.js');
 
+
 //---Test para si existe la ruta
 describe('routeExists', () => {
 
@@ -76,14 +77,14 @@ describe('should return an array paths of .md files', () => {
 });
 
 describe('extracts into an array paths of .md files', () => {
-  const route ='C:\\Users\\ANDREA\\OneDrive\\Desktop\\Laboratoria\\DEV003-md-links\\Pruebas';
+  const route = 'C:\\Users\\ANDREA\\OneDrive\\Desktop\\Laboratoria\\DEV003-md-links\\Pruebas';
   it('returns an array with file extension md', () => {
-    
+
     const arrayMd = [
       'C:\\Users\\ANDREA\\OneDrive\\Desktop\\Laboratoria\\DEV003-md-links\\Pruebas\\Pruebas.md',
       'C:\\Users\\ANDREA\\OneDrive\\Desktop\\Laboratoria\\DEV003-md-links\\Pruebas\\README2.md',
     ];
-    
+
     expect(getfilesArray(route)).toEqual(arrayMd);
   });
 });

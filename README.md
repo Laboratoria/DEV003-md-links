@@ -4,13 +4,10 @@
 
 * [1. Sobre MD-Links](#1-sobre-md-links)
 * [2. Objetivos de aprendizaje](#2-objetivos-de-aprendizaje)
-* [4. Diagramas de flujo](#4-diagramas-flujo)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Entregables](#6-entregables)
-* [7. Hacker edition](#7-hacker-edition)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
-* [10. Achicando el problema](#10-achicando-el-problema)
+* [3. Diagramas de flujo](#3-diagramas-flujo)
+* [4. Instrucciones de Uso](#4-instrucciones-de-uso)
+* [5. Checklist](#5-checklist)
+* [6. Autor](#6-autor)
 
 ***
 
@@ -208,21 +205,30 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [The Complete Guide to Status Codes for Meaningful ReST APIs - dev.to](https://dev.to/khaosdoctor/the-complete-guide-to-status-codes-for-meaningful-rest-apis-1-5c5)
 </p></details>
 
-## 4. Diagramas de flujo
+## 3. Diagramas de flujo
 
 * Diagrama MD-Links
 
-[![Diagrama-API.jpg](https://i.postimg.cc/xC4yxnGZ/Diagrama-API.png)](https://postimg.cc/njqDM8PK)
+[![Diagrama-API.jpg](https://i.postimg.cc/rmJdPBSR/Diagrama-API.jpg)](https://postimg.cc/FdYsfnCh)
 
 * Diagrama CLI
 
-[![Diagrama-CLI.jpg](https://i.postimg.cc/XYYPz79j/Diagrama-CLI.png)](https://postimg.cc/0bhZ6vtF)
+[![Diagrama-CLI-1.jpg](https://i.postimg.cc/Qd1dPLDN/Diagrama-CLI-1.jpg)](https://postimg.cc/qNBrh5gW)
 
-## 5. Instrucciones de Uso
+## 4. Instrucciones de Uso
 
+### Instalación de MD-Links
 
+` npm i md-links `
 
-## 6. Checklist
+### Implementación
+
+Para solicitar ayuda:
+` md-links <path> --help `
+
+[!(https://i.postimg.cc/Yqpc7JQq/Implementaci-n.jpg)](https://postimg.cc/kDhYFYjk)
+
+## 5. Checklist
 
 ### General
 
@@ -254,7 +260,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   lines, y branches.
 * [x] Pasa tests (y linters) (`npm test`).
 
-## 7. Autor
+## 6. Autor
 Mercedes Andrea Flores Catro
 * [Repositorio Github](https://github.com/AndreaFlo1794)
 * [LinkedIn](https://www.linkedin.com/in/mercedes-andrea-flores-castro-120048178/)

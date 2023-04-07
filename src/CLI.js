@@ -7,7 +7,7 @@ const Colors = require('colors')
 const linkStyle = array => {
   const style = array.map(
     link => ` \n 
- ${'HREF:'} ${link.href.cyan.bgBlack} 
+ ${'HREF:'} ${link.href.cyan} 
  ${'TEXT:'} ${link.text.cyan}
  ${'FILE:'} ${link.file.cyan}
  `
@@ -17,11 +17,11 @@ const linkStyle = array => {
 const linkStyleValidate = array => {
   const styleValidate = array.map(
     link => ` \n
- ${'HREF:'} ${link.href.cyan.bgBlack}
- ${'TEXT:'} ${link.text.cyan}
- ${'FILE:'} ${link.file.cyan}
+ ${'HREF:'} ${link.href.cyan}
+ ${'TEXT:'} ${link.text.yellow}
+ ${'FILE:'} ${link.file.green}
  ${'STATUS:'} ${link.status}
- ${'OK:'} ${link.ok.cyan}
+ ${'OK:'} ${link.ok.magenta}
  `
   )
   return styleValidate
@@ -57,7 +57,7 @@ const validate = option.includes('--validate') || option.includes('--v')
 const stats = option.includes('--stats') || option.includes('--s')
 const help = option.includes('--help') || option.includes('--h')
 
-mdLinks('.\\Pruebas\\README2.md', { validate })
+mdLinks(path, { validate })
   .then(resolve => {
     const links = resolve
     if (validate && stats) {

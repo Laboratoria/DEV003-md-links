@@ -47,7 +47,7 @@ const mdLinks = (path, options) => {
         };
       } else {
         if (!typeFile(abspath)) {
-          reject(new Error(`The file ${path} is not .md file.`));
+          reject(`The file ${path} is not .md file.`);
         } else {
           fileRead(abspath)
             .then((mdContent) => {
