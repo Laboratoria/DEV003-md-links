@@ -121,3 +121,27 @@ hola('diana')
         });
 
 
+// ------------ Expresiones regulares---------------------
+const regExp = /http:\/\//
+
+var url_con_qs = 'https://www.miurl.com.co/path/path/page1/login?execution=sp1',
+  url_sin_qs = 'https://www.miurl.com.co/path/path2/page2/login',
+
+  ruta1 = url_con_qs.split('?')[0].split('/').slice(-2).join('/'),
+  ruta2 = url_sin_qs.split('?')[0].split('/').slice(-2).join('/');
+
+  console.log('url con qs', ruta1);
+  console.log('url sin qs', ruta2);
+
+  const rectangle = {
+    radius: 10
+};
+const style = {
+    Backcolour: 'red'
+};
+const solidRectangle = {
+    ...rectangle,
+    ...style
+};
+console.log(solidRectangle);
+
