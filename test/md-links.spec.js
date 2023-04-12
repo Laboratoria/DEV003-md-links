@@ -1,5 +1,5 @@
 const { routeExists, absolutePath,
-  routeRelative, ifItsAdirectory, ifItsAFile, typeFile, directory, searchLinks, fileRead, getfilesArray } = require('../src/fsfunction.js');
+  routeRelative, ifItsAdirectory, ifItsAFile, typeFile, directory, searchLinks, fileRead, getfilesArray, statusLink } = require('../src/fsfunction.js');
 
 
 //---Test para si existe la ruta
@@ -132,3 +132,45 @@ describe('searchLinks', () => {
   });
 });
 
+// // -------------Array con los links para validar --------
+
+// const linkArray = [
+//   {
+//     href: 'https://regexr.com/',
+//     text: 'Markdown',
+//     file: 'C:\\Users\\ANDREA\\OneDrive\\Desktop\\Laboratoria\\DEV003-md-links\\Pruebas\\README2.md',
+//     status: 200,
+//     ok: 'ok',
+//   },
+//   {
+//     href: 'https://nodejs.org/api/fs.html',
+//     text: 'Node',
+//     file: 'C:\\Users\\ANDREA\\OneDrive\\Desktop\\Laboratoria\\DEV003-md-links\\Pruebas\\README2.md',
+//     status: 200,
+//     ok: 'ok',
+//   },
+//   {
+//     href: 'https://nodejs.org/api/fs.html/noexiste',
+//     text: 'Node no existe',
+//     file: 'C:\\Users\\ANDREA\\OneDrive\\Desktop\\Laboratoria\\DEV003-md-links\\Pruebas\\README2.md',
+//     status: 404,
+//     ok: 'fail',
+//   },
+// ]
+
+// // -------------------- Mock  1 fetch --------
+// global.fetch = jest.fn(() => {
+//   return Promise.resolve({ status: 200, ok: 'ok' })
+// })
+
+// // --------------------  getStatusLinks ------------
+// describe('statusLink', () => {
+//   it('should return statusLink.', async () => {
+//     const path = '.\\Pruebas\\README2.md'
+//     const data = await statusLink(path)
+//     expect(data).toEqual(
+//       linkArray
+//       //
+//     )
+//   })
+// })

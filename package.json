@@ -1,5 +1,5 @@
 {
-  "name": "md-links",
+  "name": "md-links-andreaflo",
   "version": "1.0.0",
   "engines": {
     "node": ">=16.x"
@@ -17,7 +17,7 @@
   "description": "Validar archivos md",
   "main": "src/API.js",
   "directories": {
-    "test": "jest --coverage --detectOpenHandles "
+    "test": "test"
   },
   "scripts": {
     "test": "jest --coverage"
@@ -26,7 +26,7 @@
   "author": "Andrea Flores",
   "license": "ISC",
   "bin": {
-    "md-links": "./src/CLI.js"
+    "md-links": "src/CLI.js"
   },
   "bugs": {
     "url": "https://github.com/AndreaFlo1794/DEV003-md-links/issues"
@@ -35,5 +35,6 @@
     "type": "git",
     "url": "git+https://github.com/AndreaFlo1794/DEV003-md-links.git"
   },
-  "homepage": "https://github.com/AndreaFlo1794/DEV003-md-links#readme"
+  "homepage": "https://github.com/AndreaFlo1794/DEV003-md-links#readme",
+  "devDependencies": {}
 }

@@ -219,7 +219,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### Instalación de MD-Links
 
-` npm i md-links `
+` npm i md-links-andreaflo `
 
 ### Implementación
 
