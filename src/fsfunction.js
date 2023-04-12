@@ -120,15 +120,7 @@ const statusLink = contentLinks => {
     })
   }
 
-    fetch ('https://ui-avatars.com/api/?name=John+Doe')
-  .then(img => {
-  console.log(img)
-}).catch(ex => {
-  console.error(ex);
-})
 
-
-  
 // fileRead('.\\Pruebas\\README2.md').then((data) => {
 //   statusLink( searchLinks('.\\Pruebas\\README2.md', data)).then(console.log)
 // })
